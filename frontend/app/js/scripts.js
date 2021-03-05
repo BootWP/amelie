@@ -1,6 +1,7 @@
 (function ($) {
 	"use strict";
 
+	// Swiper imports
 	import Swiper from 'swiper/bundle';
 	import 'swiper/swiper-bundle.css';
 	import SwiperCore, { Navigation, Pagination } from 'swiper/core';
