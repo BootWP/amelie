@@ -4,7 +4,7 @@
 @import 'global';
 @import 'libs';
 
-.aml-header {
+.aml-navbar {
 	padding: 53px 70px 0 70px;
 	background-color: #fff;
 	min-height: 450px;
@@ -33,7 +33,7 @@
 		}
 	}
 
-	&__navbar {
+	&__menu {
 		display: flex;
 		align-items: center;
 	}
@@ -595,7 +595,7 @@
 
 // Slider
 .aml-slider {
-	margin-bottom: 163px;
+	padding-bottom: 163px;
 	overflow: hidden;
 
 	a {

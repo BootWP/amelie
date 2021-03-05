@@ -1,6 +1,11 @@
 (function ($) {
 	"use strict";
 
+	import Swiper from 'swiper/bundle';
+	import 'swiper/swiper-bundle.css';
+	import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+	SwiperCore.use([Navigation, Pagination]);
+
 	// Slider
 	let swiper = new Swiper('.aml-slider', {
 		slidesPerView: 2,

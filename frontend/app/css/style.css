@@ -1,36 +1,43 @@
 @font-face {
-	font-family: 'Quicksand-Regular';
-	font-weight: 400;
-	font-style: normal;
-	src: local("Quicksand-Regular"), url("../fonts/Quicksand-Regular.woff2") format("woff2"), url("../fonts/Quicksand-Regular.woff") format("woff");
-	font-display: swap;
+  font-family: 'Italiana-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local("Italiana-Regular"), url("../fonts/Italiana-Regular.woff2") format("woff2"), url("../fonts/Italiana-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DMSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local("DMSans-Regular"), url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff");
+  font-display: swap;
 }
 
 html {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-	min-height: 100vh;
-	line-height: 1.15;
+  min-height: 100vh;
+  line-height: 1.15;
 }
 
 *,
 *::after,
 *::before {
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ul,
 ol {
-	padding: 0;
+  padding: 0;
+  margin: 0;
 }
 
 ul[class] {
-	list-style: none;
+  list-style: none;
 }
 
 body,
@@ -47,13 +54,7 @@ figcaption,
 blockquote,
 dl,
 dd {
-	margin: 0;
-}
-
-img {
-	display: block;
-	-o-object-fit: cover;
-	object-fit: cover;
+  margin: 0;
 }
 
 input,
@@ -61,25 +62,44 @@ button,
 optgroup,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 a,
 a:visited {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-.container {
-	max-width: 1200px;
-	padding: 0 15px;
-	margin: 0 auto;
+body {
+  font-family: 'Italiana-Regular', sans-serif;
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+h3 {
+  font-size: 90px;
+  line-height: 110px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.aml-container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
 }

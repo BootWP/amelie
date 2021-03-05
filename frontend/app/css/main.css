@@ -104,7 +104,7 @@ h3 {
   margin: 0 auto;
 }
 
-.aml-header {
+.aml-navbar {
   padding: 53px 70px 0 70px;
   background-color: #fff;
   min-height: 450px;
@@ -113,15 +113,15 @@ h3 {
   justify-content: space-between;
 }
 
-.aml-header__logo {
+.aml-navbar__logo {
   font-size: 52px;
 }
 
-.aml-header__logo a {
+.aml-navbar__logo a {
   position: relative;
 }
 
-.aml-header__logo a::after {
+.aml-navbar__logo a::after {
   position: absolute;
   content: '';
   width: 13px;
@@ -134,28 +134,28 @@ h3 {
   right: 25px;
 }
 
-.aml-header__navbar {
+.aml-navbar__menu {
   display: flex;
   align-items: center;
 }
 
-.aml-header__list {
+.aml-navbar__list {
   display: flex;
   align-items: center;
   margin-right: 36px;
 }
 
-.aml-header__list li + li {
+.aml-navbar__list li + li {
   margin-left: 40px;
 }
 
-.aml-header__cart {
+.aml-navbar__cart {
   margin-top: -7px;
   position: relative;
   padding-right: 8px;
 }
 
-.aml-header__cart span {
+.aml-navbar__cart span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -669,7 +669,7 @@ h3 {
 }
 
 .aml-slider {
-  margin-bottom: 163px;
+  padding-bottom: 163px;
   overflow: hidden;
 }
 
