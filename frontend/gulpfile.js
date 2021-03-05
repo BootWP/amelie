@@ -32,7 +32,7 @@ function styles() {
 // JS
 function scripts() {
 	return src([
-		'app/js/main.js'
+		'app/js/scripts.js'
 	])
 		.pipe(browserSync.stream())
 }
@@ -73,7 +73,7 @@ function cleanDist() {
 // Watching
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/js/**/main.js'], scripts);
+	watch(['app/js/**/scripts.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload)
 }
 
