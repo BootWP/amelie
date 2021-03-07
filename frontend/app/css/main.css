@@ -220,9 +220,10 @@ h3 {
 }
 
 .aml-works__bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  height: calc(250px + (1005 - 250) * ((100vw - 320px) / (1920 - 320)));
   margin-top: -50px;
-  min-height: 1005px;
   position: relative;
 }
 
@@ -431,9 +432,9 @@ h3 {
 }
 
 .aml-imagination__items {
-  min-height: 778px;
   display: grid;
   grid-template-columns: repeat(4, auto);
+  height: calc(250px + (780 - 250) * ((100vw - 320px) / (1920 - 320)));
   grid-column-gap: 40px;
 }
 
@@ -512,7 +513,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 211px;
-  min-height: 945px;
+  height: calc(250px + (945 - 250) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .aml-quote__left {
@@ -629,7 +630,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-column-gap: 28px;
-  min-height: 620px;
+  height: calc(250px + (620 - 250) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .aml-articles__item {
