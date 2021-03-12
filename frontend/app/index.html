@@ -5,17 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Amelie</title>
-
-	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
-	<link rel="stylesheet" href="css/swiper-bundle.css"> <!-- Swiper local -->
+	<link rel="stylesheet" href="css/swiper-bundle.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-	<div class="aml-site">
-
+	<div class="aml-site" id="aml-site">
+		<canvas id="noise" class="noise"></canvas>
 		<div class="aml-navbar">
 			<div class="aml-navbar__logo">
 				<a href="#">
@@ -48,9 +46,9 @@
 				</div>
 			</nav>
 		</div><!-- .aml-header -->
-
 		<div class="aml-main">
 			<div class="aml-works">
+				<canvas id="works-noise" class="noise"></canvas>
 				<div class="aml-works__top">
 					<div class="aml-works__top-inner">
 						<span>
@@ -96,11 +94,11 @@
 							<span></span>
 						</a>
 					</div>
-					<a class="aml-works__bottom-link" href="#"></a>
+					<a class="aml-works__bottom-link" href="#aml-portfolio"></a>
 				</div>
 			</div>
 			<!-- .aml-works -->
-			<div class="aml-portfolio">
+			<div class="aml-portfolio" id="aml-portfolio">
 				<div class="aml-container">
 					<div class="aml-portfolio__inner">
 						<div class="aml-portfolio__top-row">
@@ -302,8 +300,7 @@
 	</div><!-- .aml-site -->
 
 	<script src="js/jquery.min.js"></script>
-	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-	<script src="js/swiper-bundle.js"></script> <!-- Swiper local -->
+	<script src="js/swiper-bundle.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 
