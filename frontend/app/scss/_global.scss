@@ -1,5 +1,6 @@
 body {
 	font-family: 'Italiana-Regular', sans-serif;
+	overflow-x: hidden;
 }
 
 img {
@@ -7,18 +8,133 @@ img {
 	object-fit: cover;
 	max-width: 100%;
 	height: auto;
-	// object-position: 0 0;
+}
+
+a {
+	cursor: none;
 }
 
 h3 {
-	font-size: 90px;
+	font-size: calc(25px + (90 - 25) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 110px;
 	font-weight: 400;
 	letter-spacing: -0.01em;
+	transform: translateX(-100%);
+
+	&.show {
+		transform: translateX(0%);
+	}
 }
 
 .aml-container {
 	max-width: 1320px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.aml-site {
+	position: relative;
+	z-index: 1;
+	cursor: none;
+
+	&:after {
+		animation: noise 8s steps(10) infinite;
+		background-image: url(../images/noise.png);
+		content: '';
+		display: block;
+		height: 300%;
+		left: -100%;
+		position: fixed;
+		top: -100%;
+		width: 300%;
+		opacity: .3;
+		transform: translate3d(0, 0, 0);
+		z-index: -1;
+		pointer-events: none;
+	}
+}
+
+@keyframes noise {
+
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+
+	10% {
+		transform: translate(-5%, -8%);
+	}
+
+	10% {
+		transform: translate(-5%, -8%);
+	}
+
+	20% {
+		transform: translate(-10%, 3%);
+	}
+
+	30% {
+		transform: translate(7%, -15%);
+	}
+
+	40% {
+		transform: translate(-5%, 15%);
+	}
+
+	50% {
+		transform: translate(-10%, 10%);
+	}
+
+	60% {
+		transform: translate(10%, 0%);
+	}
+
+	70% {
+		transform: translate(0%, 15%);
+	}
+
+	80% {
+		transform: translate(3%, 11%);
+	}
+
+	90% {
+		transform: translate(-8%, 10%);
+	}
+}
+
+// Cursor
+.aml-site__cursor {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 2px solid #000;
+	z-index: 999;
+	transition: transform .5s, filter .3s;
+	pointer-events: none;
+	filter: blur(1px);
+	transform: scale(0.9);
+
+	&.hover-on-link {
+		transform: scale(1.1);
+		filter: blur(2px);
+	}
+
+	&.hover-on-footer {
+		border-color: #fff;
+	}
+}
+
+// Slide on load / on scroll
+.slide-on-load,
+.slide-on-scroll {
+	transition: transform .8s,
+		opacity .5s;
+	opacity: 0;
+	transition-timing-function: ease-in-out;
+
+	&.show {
+		opacity: 1;
+	}
 }
