@@ -1016,7 +1016,7 @@
 	margin-bottom: 63px;
 }
 
-.search-field {
+.search-form {
 	border: none;
 	background-image: url(../images/icons/search.svg);
 	background-repeat: no-repeat;
@@ -1024,11 +1024,15 @@
 	border: 1px solid #D9D9D9;
 	padding: 19px 19px 19px 52px;
 	max-height: 58px;
-	cursor: none;
-	font-family: 'DMSans-Regular',
-		sans-serif;
-	font-size: 16px;
-	color: #676767;
+
+	input {
+		font-family: 'DMSans-Regular',
+			sans-serif;
+		font-size: 16px;
+		color: #676767;
+		border: none;
+		width: 100%;
+	}
 }
 
 h5.widget-title {
