@@ -1,11 +1,10 @@
 html {
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 }
 
 body {
 	min-height: 100vh;
-	line-height: 1.15;
+	line-height: 1;
 }
 
 *,
@@ -39,6 +38,33 @@ blockquote,
 dl,
 dd {
 	margin: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+img {
+	display: block;
+	object-fit: cover;
+	max-width: 100%;
+	// object-position: 0 0;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	background-clip: padding-box;
+
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+input[type=submit] {
+	-webkit-appearance: none;
+	cursor: pointer;
 }
 
 input,

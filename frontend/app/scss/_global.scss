@@ -14,7 +14,46 @@ a {
 	cursor: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -0.01em;
+}
+
+h1 {
+	font-size: 90px;
+	line-height: 98px;
+}
+
+h2 {
+	font-size: 90px;
+	line-height: 98px;
+}
+
 h3 {
+	font-size: 55px;
+	line-height: 58px;
+}
+
+h4 {
+	font-size: 46px;
+	line-height: 50px;
+}
+
+h5 {
+	font-size: 30px;
+	line-height: 35px;
+}
+
+h6 {
+	font-size: 23px;
+	line-height: 27px;
+}
+
+h3.slide-on-scroll {
 	font-size: calc(25px + (90 - 25) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 110px;
 	font-weight: 400;

@@ -53,9 +53,10 @@
 
 	// Custom cursor
 	$(document).on('mousemove', function (e) {
-		var width = $('.aml-site__cursor').width() / 2;
-		var height = $('.aml-site__cursor').height() / 2;
-		$('.aml-site__cursor').css({
+		let customCursor = $('.aml-site__cursor');
+		let width = customCursor.width() / 2;
+		let height = customCursor.height() / 2;
+		customCursor.css({
 			left: e.pageX - width,
 			top: e.pageY - height,
 		});
@@ -77,4 +78,23 @@
 			$('.aml-site__cursor').removeClass('hover-on-footer');
 		});
 
+	$('.aml-typography__navbar')
+		.on('mouseenter', function () {
+			$('.aml-site__cursor').addClass('hover-on-footer');
+		})
+		.on('mouseleave', function () {
+			$('.aml-site__cursor').removeClass('hover-on-footer');
+		});
+
+	// Scroll
+	$("body").on('click', '[href*="#"]', function (e) {
+		let navHeight = $('.aml-navbar').height() + 100;
+		$('html,body').stop().animate({
+			scrollTop: $(this.hash).offset().top - navHeight
+		}, 1000);
+		e.preventDefault();
+	});
+
 })(jQuery);
+
+
