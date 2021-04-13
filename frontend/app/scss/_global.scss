@@ -91,6 +91,12 @@ h3.slide-on-scroll {
 		z-index: -1;
 		pointer-events: none;
 	}
+
+	&.no-noise {
+		&::after {
+			display: none;
+		}
+	}
 }
 
 @keyframes noise {
